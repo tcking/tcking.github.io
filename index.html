@@ -189,15 +189,6 @@
 
     
     
-      
-      
-        
-        
-        
-      
-
-      
-    
 
     
       
@@ -277,8 +268,7 @@
 <h2 id="安装部署工具-用于将静态文件push到github等"><a href="#安装部署工具-用于将静态文件push到github等" class="headerlink" title="安装部署工具(用于将静态文件push到github等)"></a>安装部署工具(用于将静态文件push到github等)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>编辑_config.yml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:&#10;  type: git&#10;  repo: git@github.com:tcking/tcking.github.io.git&#10;  branch: master&#10;  message:</span><br></pre></td></tr></table></figure></p>
 <h2 id="迁移（from-Jekyll）"><a href="#迁移（from-Jekyll）" class="headerlink" title="迁移（from Jekyll）"></a>迁移（from Jekyll）</h2><p>1.将原目录_posts中的md文件拷贝到source/_posts目录中<br>2.编辑_config.yml,new_post_name的值修改为 <code>:year-:month-:day-:title.md</code></p>
-<p>#写作流程</p>
-<ol>
+<h1 id="写作流程"><a href="#写作流程" class="headerlink" title="写作流程"></a>写作流程</h1><ol>
 <li><p>创建blog</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo new <span class="string">"myblog"</span> //<span class="keyword">then</span> edit the new file</span><br></pre></td></tr></table></figure>
 </li>
