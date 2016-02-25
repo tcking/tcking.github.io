@@ -1,0 +1,679 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="先说问题：从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。
+1.自测能力弱
+经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测">
+<meta property="og:type" content="article">
+<meta property="og:title" content="年中总结&所想">
+<meta property="og:url" content="http://tcking.github.io/2015/06/24/middle-summarize/index.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:description" content="先说问题：从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。
+1.自测能力弱
+经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测">
+<meta property="og:updated_time" content="2016-02-25T07:28:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="年中总结&所想">
+<meta name="twitter:description" content="先说问题：从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。
+1.自测能力弱
+经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 年中总结&所想 | blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">blog home</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                年中总结&所想
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2015-06-24T00:00:00+08:00" content="2015-06-24">
+              2015-06-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/think/" itemprop="url" rel="index">
+                    <span itemprop="name">think</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="先说问题："><a href="#先说问题：" class="headerlink" title="先说问题："></a>先说问题：</h1><p>从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。</p>
+<p>1.自测能力弱</p>
+<p>经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测试环节在开发流程中得重要性，在新版本计划时，在asana中先创建测试任务，记录要测试的场景，在后继的开发过程中不断补充完善，测试任务分配到人；必做三类测试“升级”，“全新”和“登出再登录”；落实好code review。</p>
+<p>2.team之间协同低效</p>
+<p>对业务的整体流程不清楚，还有只关心自己的一亩三分地的思想造成了这些问题，同一个逻辑范围上的数据因为不同的人负责，接口也被切分开来。wiki不知道怎么用，要查一个api，首先要想想它属于哪个模块，是人脉？还是电商？还是其他，每个team放的地方，格式都不一样，还有没更新的，就像大海捞针。每个人都应要有主人翁精神，这些问题除了做好自己的工作，能做的不多。</p>
+<h1 id="再说需要坚持的："><a href="#再说需要坚持的：" class="headerlink" title="再说需要坚持的："></a>再说需要坚持的：</h1><p>1.坚持做code review</p>
+<p>code review是今年春节后作为每次版本发布的一个任务，team的每个人都必须对git上checkout下来的代码review一遍，这样的好处有很多，首先是熟悉了别人的代码和逻辑，更重要的是能提前发现逻辑问题和性能问题，还能重构优化代码，我统计了下除了赶时间写功能赶发布做的比较粗糙，其他时间code review我们都做的比较好，每次review后几乎都能对代码做一些改进。</p>
+<p>2.用好工具，多分享</p>
+<p>从ADT转向android studio，所有任务上asana，这些工具真得很好用，我们也开了好几次分享小会，提升技能，提升工作效率，更是种快乐。</p>
+<h1 id="从局内人看JF："><a href="#从局内人看JF：" class="headerlink" title="从局内人看JF："></a>从局内人看JF：</h1><p>看到的还是问题，而且还很严重，协同低效的不仅仅是各team，更是个JF内部各系统之间调用问题，各系统之间直接调用，缺乏一个以事件驱动连接各系统的框架。</p>
+<h1 id="从局外人看JF："><a href="#从局外人看JF：" class="headerlink" title="从局外人看JF："></a>从局外人看JF：</h1><p>提一个我认为可以改进的地方。收取10%手续费？平台照样收，但可以换个说法。平台连接得是发包商和开发者，缺少任何一方都不行，但是这两方却有不同的特点，发包方发包是一种“刚性”需求，发包商目标不是发包而是为了解决自己的问题，可能通过其他商业公司，上JF平台等来满足自己的需求，至于谁来接包则是一个选择过程，他总会想办法满足自己的需求，所以类似于“刚性”；开发者接包，是“改善型”需求，开发者只有觉得价钱合适才会去选择接包，不合适宁愿闲着（鉴于实际情况，有能力的接包者基本上没有什么闲得时间），所以愿意接包得比例应该不是很大。另外在从人的心理来分析，接包人接到100块的单，实际收到的是90块，从这样看平台10%的手续费就是从开发者身上扣除，会给开发者造成抵触。何不在需求市场的报价就是接包者净得？就好比之前看到一个故事，一家自助餐厅对严重浪费食物的客人罚款10元，结果有客人抵触，后来改为就餐价格上涨10元，对没有浪费的客人奖励10元，客人们都能接受；很多人买东西只买降价了多少，对原来是多少可能并不在意，这是种普遍心理现象，接包者接到90得包和接到100得包其实感觉是差不太多的，但是从100里面再扣除10快，虽然收入都是90块，但是给人的心理感受是不一样。发包商是公司，开发者是个人，开发者是传统意义上的弱者，保护弱者符合一般认知，所以平台应该采用在线上迎合开发者，线下迎合发包商这样的策略。</p>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/12/giraffe/" rel="next" title="让android开发更轻松些">
+                <i class="fa fa-chevron-left"></i> 让android开发更轻松些
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/25/blog-whith-hexo/" rel="prev" title="blog whith hexo">
+                blog whith hexo <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
+               alt="tcking" />
+          <p class="site-author-name" itemprop="name">tcking</p>
+          <p class="site-description motion-element" itemprop="description">blog</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+          
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分類</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#先说问题："><span class="nav-number">1.</span> <span class="nav-text">先说问题：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#再说需要坚持的："><span class="nav-number">2.</span> <span class="nav-text">再说需要坚持的：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从局内人看JF："><span class="nav-number">3.</span> <span class="nav-text">从局内人看JF：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从局外人看JF："><span class="nav-number">4.</span> <span class="nav-text">从局外人看JF：</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tcking</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+
+  
+  
+
+
+</body>
+</html>
