@@ -221,6 +221,100 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/02/jitpack/" itemprop="url">
+                  jitpack
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-03-02T10:41:03+08:00" content="2016-03-02">
+              2016-03-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/02/jitpack/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/02/jitpack/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>几个project之前都是通过<a href="https://jitpack.io" target="_blank" rel="external">jitpack</a>来打包发布的，今天突然发现通过<code>compile &#39;com.github.tcking.PhotoHelper:1.2&#39;</code>不能获取到<a href="https://github.com/tcking/PhotoHelper" target="_blank" rel="external">PhotoHelper</a>发布的文件，gradle 提示找不到文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jitpack.io/com/github/tcking/PhotoHelper/library/1.2/library-1.2.jar</span><br></pre></td></tr></table></figure>
+<p>经多尝试，发现aar的文件路径为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jitpack.io/com/github/tcking/PhotoHelper/1.2/PhotoHelper-1.2.aar</span><br></pre></td></tr></table></figure></p>
+<p>但实际上<a href="https://jitpack.io/com/github/tcking/PhotoHelper" target="_blank" rel="external">https://jitpack.io/com/github/tcking/PhotoHelper</a> 目录下已经没有library目录，</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/25/compile-ijkplayer-with-openssl/" itemprop="url">
                   compile ijkplayer with openssl
                 </a>
@@ -271,10 +365,10 @@
         
           
             <h1 id="with-openssl"><a href="#with-openssl" class="headerlink" title="with openssl"></a>with openssl</h1><h2 id="1-Change-config-module-sh-with-module-lite-sh"><a href="#1-Change-config-module-sh-with-module-lite-sh" class="headerlink" title="1. Change config/module.sh with module-lite.sh"></a>1. Change config/module.sh with module-lite.sh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> config</span><br><span class="line">$ rm module.sh</span><br><span class="line">$ ln <span class="operator">-s</span> module-lite.sh module.sh</span><br></pre></td></tr></table></figure>
-<h2 id="2-init-openssl"><a href="#2-init-openssl" class="headerlink" title="2. init openssl"></a>2. init openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./init-android-openssl.sh</span><br></pre></td></tr></table></figure>
-<h2 id="3-compile-openssl"><a href="#3-compile-openssl" class="headerlink" title="3. compile openssl"></a>3. compile openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> android/contrib</span><br><span class="line">./compile-openssl.sh all</span><br></pre></td></tr></table></figure>
+<h2 id="2-init-openssl"><a href="#2-init-openssl" class="headerlink" title="2. init openssl"></a>2. init openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ ./init-android-openssl.sh</span><br></pre></td></tr></table></figure>
+<h2 id="3-compile-openssl"><a href="#3-compile-openssl" class="headerlink" title="3. compile openssl"></a>3. compile openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> android/contrib</span><br><span class="line">$ ./compile-openssl.sh clean</span><br><span class="line">$ ./compile-openssl.sh all</span><br></pre></td></tr></table></figure>
 <h2 id="4-init-android"><a href="#4-init-android" class="headerlink" title="4. init android"></a>4. init android</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ../..</span><br><span class="line">./init-android.sh</span><br></pre></td></tr></table></figure>
-<h2 id="5-compile-ffmpeg"><a href="#5-compile-ffmpeg" class="headerlink" title="5. compile ffmpeg"></a>5. compile ffmpeg</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> android/contrib</span><br><span class="line">$ ./compile-ffmpeg.sh all</span><br></pre></td></tr></table></figure>
+<h2 id="5-compile-ffmpeg-x86-64-need-yasm-brew-install-yasm"><a href="#5-compile-ffmpeg-x86-64-need-yasm-brew-install-yasm" class="headerlink" title="5. compile ffmpeg (x86_64 need yasm: $ brew install yasm)"></a>5. compile ffmpeg (x86_64 need yasm: $ brew install yasm)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> android/contrib</span><br><span class="line">$ ./compile-ffmpeg.sh clean</span><br><span class="line">$ ./compile-ffmpeg.sh all</span><br></pre></td></tr></table></figure>
 <h2 id="6-compile-ijk"><a href="#6-compile-ijk" class="headerlink" title="6. compile ijk"></a>6. compile ijk</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ ./compile-ijk.sh all</span><br></pre></td></tr></table></figure>
 <h2 id="7-copy-so-files"><a href="#7-copy-so-files" class="headerlink" title="7. copy so files"></a>7. copy so files</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp ijkplayer/ijkplayer-armv5/src/main/libs  ijkplayer-java/src/main/jniLibs</span><br><span class="line">cp ijkplayer/ijkplayer-armv7a/src/main/libs  ijkplayer-java/src/main/jniLibs</span><br><span class="line">cp ijkplayer/ijkplayer-arm64/src/main/libs  ijkplayer-java/src/main/jniLibs</span><br><span class="line">cp ijkplayer/ijkplayer-x86/src/main/libs ijkplayer-java/src/main/jniLibs</span><br></pre></td></tr></table></figure>
           
@@ -1240,121 +1334,14 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/03/13/ImageCroppingView/" itemprop="url">
-                  开源ImageCroppingView
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2014-03-13T00:00:00+08:00" content="2014-03-13">
-              2014-03-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/skill/" itemprop="url" rel="index">
-                    <span itemprop="name">skill</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2014/03/13/ImageCroppingView/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/03/13/ImageCroppingView/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在<a href="https://github.com/tcking/ImageCroppingView" target="_blank" rel="external">TouchImageView</a>图片缩放滑动的基础上添加剪裁功能，可用于头像设置等。</p>
-<p><img src="https://github.com/tcking/ImageCroppingView/raw/master/sample.gif" alt="预览"></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1393,7 +1380,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>

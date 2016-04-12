@@ -58,21 +58,21 @@
 
 
 <meta name="description" content="with openssl1. Change config/module.sh with module-lite.sh123$ cd config$ rm module.sh$ ln -s module-lite.sh module.sh
-2. init openssl1$ ./init-android-openssl.sh
-3. compile openssl12cd android/contri">
+2. init openssl12$ cd ..$ ./init-android-openssl.sh
+3. compile openssl123$ cd and">
 <meta property="og:type" content="article">
 <meta property="og:title" content="compile ijkplayer with openssl">
 <meta property="og:url" content="http://tcking.github.io/2016/02/25/compile-ijkplayer-with-openssl/index.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="with openssl1. Change config/module.sh with module-lite.sh123$ cd config$ rm module.sh$ ln -s module-lite.sh module.sh
-2. init openssl1$ ./init-android-openssl.sh
-3. compile openssl12cd android/contri">
-<meta property="og:updated_time" content="2016-02-25T09:29:26.000Z">
+2. init openssl12$ cd ..$ ./init-android-openssl.sh
+3. compile openssl123$ cd and">
+<meta property="og:updated_time" content="2016-04-07T07:18:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="compile ijkplayer with openssl">
 <meta name="twitter:description" content="with openssl1. Change config/module.sh with module-lite.sh123$ cd config$ rm module.sh$ ln -s module-lite.sh module.sh
-2. init openssl1$ ./init-android-openssl.sh
-3. compile openssl12cd android/contri">
+2. init openssl12$ cd ..$ ./init-android-openssl.sh
+3. compile openssl123$ cd and">
 
 
 
@@ -256,10 +256,10 @@
 
       
         <h1 id="with-openssl"><a href="#with-openssl" class="headerlink" title="with openssl"></a>with openssl</h1><h2 id="1-Change-config-module-sh-with-module-lite-sh"><a href="#1-Change-config-module-sh-with-module-lite-sh" class="headerlink" title="1. Change config/module.sh with module-lite.sh"></a>1. Change config/module.sh with module-lite.sh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> config</span><br><span class="line">$ rm module.sh</span><br><span class="line">$ ln <span class="operator">-s</span> module-lite.sh module.sh</span><br></pre></td></tr></table></figure>
-<h2 id="2-init-openssl"><a href="#2-init-openssl" class="headerlink" title="2. init openssl"></a>2. init openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./init-android-openssl.sh</span><br></pre></td></tr></table></figure>
-<h2 id="3-compile-openssl"><a href="#3-compile-openssl" class="headerlink" title="3. compile openssl"></a>3. compile openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> android/contrib</span><br><span class="line">./compile-openssl.sh all</span><br></pre></td></tr></table></figure>
+<h2 id="2-init-openssl"><a href="#2-init-openssl" class="headerlink" title="2. init openssl"></a>2. init openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ ./init-android-openssl.sh</span><br></pre></td></tr></table></figure>
+<h2 id="3-compile-openssl"><a href="#3-compile-openssl" class="headerlink" title="3. compile openssl"></a>3. compile openssl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> android/contrib</span><br><span class="line">$ ./compile-openssl.sh clean</span><br><span class="line">$ ./compile-openssl.sh all</span><br></pre></td></tr></table></figure>
 <h2 id="4-init-android"><a href="#4-init-android" class="headerlink" title="4. init android"></a>4. init android</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ../..</span><br><span class="line">./init-android.sh</span><br></pre></td></tr></table></figure>
-<h2 id="5-compile-ffmpeg"><a href="#5-compile-ffmpeg" class="headerlink" title="5. compile ffmpeg"></a>5. compile ffmpeg</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> android/contrib</span><br><span class="line">$ ./compile-ffmpeg.sh all</span><br></pre></td></tr></table></figure>
+<h2 id="5-compile-ffmpeg-x86-64-need-yasm-brew-install-yasm"><a href="#5-compile-ffmpeg-x86-64-need-yasm-brew-install-yasm" class="headerlink" title="5. compile ffmpeg (x86_64 need yasm: $ brew install yasm)"></a>5. compile ffmpeg (x86_64 need yasm: $ brew install yasm)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> android/contrib</span><br><span class="line">$ ./compile-ffmpeg.sh clean</span><br><span class="line">$ ./compile-ffmpeg.sh all</span><br></pre></td></tr></table></figure>
 <h2 id="6-compile-ijk"><a href="#6-compile-ijk" class="headerlink" title="6. compile ijk"></a>6. compile ijk</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ..</span><br><span class="line">$ ./compile-ijk.sh all</span><br></pre></td></tr></table></figure>
 <h2 id="7-copy-so-files"><a href="#7-copy-so-files" class="headerlink" title="7. copy so files"></a>7. copy so files</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp ijkplayer/ijkplayer-armv5/src/main/libs  ijkplayer-java/src/main/jniLibs</span><br><span class="line">cp ijkplayer/ijkplayer-armv7a/src/main/libs  ijkplayer-java/src/main/jniLibs</span><br><span class="line">cp ijkplayer/ijkplayer-arm64/src/main/libs  ijkplayer-java/src/main/jniLibs</span><br><span class="line">cp ijkplayer/ijkplayer-x86/src/main/libs ijkplayer-java/src/main/jniLibs</span><br></pre></td></tr></table></figure>
       
@@ -285,6 +285,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/02/jitpack/" rel="prev" title="jitpack">
+                jitpack <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -356,7 +360,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -406,7 +410,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#with-openssl"><span class="nav-number">1.</span> <span class="nav-text">with openssl</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Change-config-module-sh-with-module-lite-sh"><span class="nav-number">1.1.</span> <span class="nav-text">1. Change config/module.sh with module-lite.sh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-init-openssl"><span class="nav-number">1.2.</span> <span class="nav-text">2. init openssl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-compile-openssl"><span class="nav-number">1.3.</span> <span class="nav-text">3. compile openssl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-init-android"><span class="nav-number">1.4.</span> <span class="nav-text">4. init android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-compile-ffmpeg"><span class="nav-number">1.5.</span> <span class="nav-text">5. compile ffmpeg</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-compile-ijk"><span class="nav-number">1.6.</span> <span class="nav-text">6. compile ijk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-copy-so-files"><span class="nav-number">1.7.</span> <span class="nav-text">7. copy so files</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#with-openssl"><span class="nav-number">1.</span> <span class="nav-text">with openssl</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Change-config-module-sh-with-module-lite-sh"><span class="nav-number">1.1.</span> <span class="nav-text">1. Change config/module.sh with module-lite.sh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-init-openssl"><span class="nav-number">1.2.</span> <span class="nav-text">2. init openssl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-compile-openssl"><span class="nav-number">1.3.</span> <span class="nav-text">3. compile openssl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-init-android"><span class="nav-number">1.4.</span> <span class="nav-text">4. init android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-compile-ffmpeg-x86-64-need-yasm-brew-install-yasm"><span class="nav-number">1.5.</span> <span class="nav-text">5. compile ffmpeg (x86_64 need yasm: $ brew install yasm)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-compile-ijk"><span class="nav-number">1.6.</span> <span class="nav-text">6. compile ijk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-copy-so-files"><span class="nav-number">1.7.</span> <span class="nav-text">7. copy so files</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

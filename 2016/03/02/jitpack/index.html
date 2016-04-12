@@ -57,22 +57,19 @@
 
 
 
-<meta name="description" content="先说问题：从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。
-1.自测能力弱
-经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测">
+<meta name="description" content="几个project之前都是通过jitpack来打包发布的，今天突然发现通过compile &amp;#39;com.github.tcking.PhotoHelper:1.2&amp;#39;不能获取到PhotoHelper发布的文件，gradle 提示找不到文件：
+1https://jitpack.io/com/github/tcking/PhotoHelper/library/1.2/library-1.2.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="年中总结&所想">
-<meta property="og:url" content="http://tcking.github.io/2015/06/24/middle-summarize/index.html">
+<meta property="og:title" content="jitpack">
+<meta property="og:url" content="http://tcking.github.io/2016/03/02/jitpack/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="先说问题：从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。
-1.自测能力弱
-经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测">
-<meta property="og:updated_time" content="2016-02-25T07:28:03.000Z">
+<meta property="og:description" content="几个project之前都是通过jitpack来打包发布的，今天突然发现通过compile &amp;#39;com.github.tcking.PhotoHelper:1.2&amp;#39;不能获取到PhotoHelper发布的文件，gradle 提示找不到文件：
+1https://jitpack.io/com/github/tcking/PhotoHelper/library/1.2/library-1.2.">
+<meta property="og:updated_time" content="2016-03-03T06:24:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="年中总结&所想">
-<meta name="twitter:description" content="先说问题：从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。
-1.自测能力弱
-经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测">
+<meta name="twitter:title" content="jitpack">
+<meta name="twitter:description" content="几个project之前都是通过jitpack来打包发布的，今天突然发现通过compile &amp;#39;com.github.tcking.PhotoHelper:1.2&amp;#39;不能获取到PhotoHelper发布的文件，gradle 提示找不到文件：
+1https://jitpack.io/com/github/tcking/PhotoHelper/library/1.2/library-1.2.">
 
 
 
@@ -90,7 +87,7 @@
   };
 </script>
 
-  <title> 年中总结&所想 | blog </title>
+  <title> jitpack | blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -210,7 +207,7 @@
             
             
               
-                年中总结&所想
+                jitpack
               
             
           </h1>
@@ -222,38 +219,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2015-06-24T00:00:00+08:00" content="2015-06-24">
-              2015-06-24
+            <time itemprop="dateCreated" datetime="2016-03-02T10:41:03+08:00" content="2016-03-02">
+              2016-03-02
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/think/" itemprop="url" rel="index">
-                    <span itemprop="name">think</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/06/24/middle-summarize/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/24/middle-summarize/" itemprop="commentsCount"></span>
+                <a href="/2016/03/02/jitpack/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/02/jitpack/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -274,17 +252,10 @@
       
 
       
-        <h1 id="先说问题："><a href="#先说问题：" class="headerlink" title="先说问题："></a>先说问题：</h1><p>从春节到年中，发布的版本不多，真正更新到用户手上的新功能更少，但是这种状态下的版本发布也不能做到从容应对，需要加班，这暴露我们些问题。</p>
-<p>1.自测能力弱</p>
-<p>经过自己的测试后，测试team总能再发现些低级的bug，总结下原因，首先测试方法不对，自测现在是盲测，在脑子里没有设计好覆盖变动逻辑的测试场景，测试覆盖不全面。其次是心态不对，就像考试完后不想再检查，急于交卷。目前我们也在改进这块，提升测试环节在开发流程中得重要性，在新版本计划时，在asana中先创建测试任务，记录要测试的场景，在后继的开发过程中不断补充完善，测试任务分配到人；必做三类测试“升级”，“全新”和“登出再登录”；落实好code review。</p>
-<p>2.team之间协同低效</p>
-<p>对业务的整体流程不清楚，还有只关心自己的一亩三分地的思想造成了这些问题，同一个逻辑范围上的数据因为不同的人负责，接口也被切分开来。wiki不知道怎么用，要查一个api，首先要想想它属于哪个模块，是人脉？还是电商？还是其他，每个team放的地方，格式都不一样，还有没更新的，就像大海捞针。每个人都应要有主人翁精神，这些问题除了做好自己的工作，能做的不多。</p>
-<h1 id="再说需要坚持的："><a href="#再说需要坚持的：" class="headerlink" title="再说需要坚持的："></a>再说需要坚持的：</h1><p>1.坚持做code review</p>
-<p>code review是今年春节后作为每次版本发布的一个任务，team的每个人都必须对git上checkout下来的代码review一遍，这样的好处有很多，首先是熟悉了别人的代码和逻辑，更重要的是能提前发现逻辑问题和性能问题，还能重构优化代码，我统计了下除了赶时间写功能赶发布做的比较粗糙，其他时间code review我们都做的比较好，每次review后几乎都能对代码做一些改进。</p>
-<p>2.用好工具，多分享</p>
-<p>从ADT转向android studio，所有任务上asana，这些工具真得很好用，我们也开了好几次分享小会，提升技能，提升工作效率，更是种快乐。</p>
-<h1 id="从局内人看JF："><a href="#从局内人看JF：" class="headerlink" title="从局内人看JF："></a>从局内人看JF：</h1><p>看到的还是问题，而且还很严重，协同低效的不仅仅是各team，更是个JF内部各系统之间调用问题，各系统之间直接调用，缺乏一个以事件驱动连接各系统的框架。</p>
-<h1 id="从局外人看JF："><a href="#从局外人看JF：" class="headerlink" title="从局外人看JF："></a>从局外人看JF：</h1><p>提一个我认为可以改进的地方。收取10%手续费？平台照样收，但可以换个说法。平台连接得是发包商和开发者，缺少任何一方都不行，但是这两方却有不同的特点，发包方发包是一种“刚性”需求，发包商目标不是发包而是为了解决自己的问题，可能通过其他商业公司，上JF平台等来满足自己的需求，至于谁来接包则是一个选择过程，他总会想办法满足自己的需求，所以类似于“刚性”；开发者接包，是“改善型”需求，开发者只有觉得价钱合适才会去选择接包，不合适宁愿闲着（鉴于实际情况，有能力的接包者基本上没有什么闲得时间），所以愿意接包得比例应该不是很大。另外在从人的心理来分析，接包人接到100块的单，实际收到的是90块，从这样看平台10%的手续费就是从开发者身上扣除，会给开发者造成抵触。何不在需求市场的报价就是接包者净得？就好比之前看到一个故事，一家自助餐厅对严重浪费食物的客人罚款10元，结果有客人抵触，后来改为就餐价格上涨10元，对没有浪费的客人奖励10元，客人们都能接受；很多人买东西只买降价了多少，对原来是多少可能并不在意，这是种普遍心理现象，接包者接到90得包和接到100得包其实感觉是差不太多的，但是从100里面再扣除10快，虽然收入都是90块，但是给人的心理感受是不一样。发包商是公司，开发者是个人，开发者是传统意义上的弱者，保护弱者符合一般认知，所以平台应该采用在线上迎合开发者，线下迎合发包商这样的策略。</p>
+        <p>几个project之前都是通过<a href="https://jitpack.io" target="_blank" rel="external">jitpack</a>来打包发布的，今天突然发现通过<code>compile &#39;com.github.tcking.PhotoHelper:1.2&#39;</code>不能获取到<a href="https://github.com/tcking/PhotoHelper" target="_blank" rel="external">PhotoHelper</a>发布的文件，gradle 提示找不到文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jitpack.io/com/github/tcking/PhotoHelper/library/1.2/library-1.2.jar</span><br></pre></td></tr></table></figure>
+<p>经多尝试，发现aar的文件路径为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jitpack.io/com/github/tcking/PhotoHelper/1.2/PhotoHelper-1.2.aar</span><br></pre></td></tr></table></figure></p>
+<p>但实际上<a href="https://jitpack.io/com/github/tcking/PhotoHelper" target="_blank" rel="external">https://jitpack.io/com/github/tcking/PhotoHelper</a> 目录下已经没有library目录，</p>
 
       
     </div>
@@ -296,17 +267,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/12/giraffe/" rel="next" title="让android开发更轻松些">
-                <i class="fa fa-chevron-left"></i> 让android开发更轻松些
+              <a href="/2016/02/25/compile-ijkplayer-with-openssl/" rel="next" title="compile ijkplayer with openssl">
+                <i class="fa fa-chevron-left"></i> compile ijkplayer with openssl
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/25/blog-whith-hexo/" rel="prev" title="blog whith hexo">
-                blog whith hexo <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -332,8 +299,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/06/24/middle-summarize/"
-           data-title="年中总结&所想" data-url="http://tcking.github.io/2015/06/24/middle-summarize/">
+      <div class="ds-thread" data-thread-key="2016/03/02/jitpack/"
+           data-title="jitpack" data-url="http://tcking.github.io/2016/03/02/jitpack/">
       </div>
     
   </div>
@@ -428,7 +395,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#先说问题："><span class="nav-number">1.</span> <span class="nav-text">先说问题：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#再说需要坚持的："><span class="nav-number">2.</span> <span class="nav-text">再说需要坚持的：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从局内人看JF："><span class="nav-number">3.</span> <span class="nav-text">从局内人看JF：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从局外人看JF："><span class="nav-number">4.</span> <span class="nav-text">从局外人看JF：</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
