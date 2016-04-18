@@ -57,22 +57,16 @@
 
 
 
-<meta name="description" content="虽然写的少，但是看到好的东西就长了草，了解了下hexo,觉得比Jekyll要便捷多了，至少hexo这个单词比Jekyll好拼写，以下是搭建和迁移过程：
-搭建安装nodejs和git （hexo基于nodejs）1.通过nvm安装nodejs(nvm是node的版本管理，可以安装和切换不同版本的nodejs)
-12$ curl -o- https://raw.githubusercontent.co">
+<meta name="description" content="自己电脑上的dev环境好久没有更新，更新了最新的genymotion后，adb不能连接到虚拟机，花费了些时间，记录如下：1.执行adb提示adb server is out of date,尝试修改genymotion的adb路径为~/Library/Android/sdk,执行adb kill-server,adb start-server后问题依旧2.求助google，发现需要将adb upd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog whith hexo">
-<meta property="og:url" content="http://tcking.github.io/2016/02/25/blog-whith-hexo/index.html">
+<meta property="og:title" content="adb server is out of date">
+<meta property="og:url" content="http://tcking.github.io/2016/04/18/adb-server-is-out-of-date/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="虽然写的少，但是看到好的东西就长了草，了解了下hexo,觉得比Jekyll要便捷多了，至少hexo这个单词比Jekyll好拼写，以下是搭建和迁移过程：
-搭建安装nodejs和git （hexo基于nodejs）1.通过nvm安装nodejs(nvm是node的版本管理，可以安装和切换不同版本的nodejs)
-12$ curl -o- https://raw.githubusercontent.co">
-<meta property="og:updated_time" content="2016-02-25T09:00:00.000Z">
+<meta property="og:description" content="自己电脑上的dev环境好久没有更新，更新了最新的genymotion后，adb不能连接到虚拟机，花费了些时间，记录如下：1.执行adb提示adb server is out of date,尝试修改genymotion的adb路径为~/Library/Android/sdk,执行adb kill-server,adb start-server后问题依旧2.求助google，发现需要将adb upd">
+<meta property="og:updated_time" content="2016-04-18T09:40:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blog whith hexo">
-<meta name="twitter:description" content="虽然写的少，但是看到好的东西就长了草，了解了下hexo,觉得比Jekyll要便捷多了，至少hexo这个单词比Jekyll好拼写，以下是搭建和迁移过程：
-搭建安装nodejs和git （hexo基于nodejs）1.通过nvm安装nodejs(nvm是node的版本管理，可以安装和切换不同版本的nodejs)
-12$ curl -o- https://raw.githubusercontent.co">
+<meta name="twitter:title" content="adb server is out of date">
+<meta name="twitter:description" content="自己电脑上的dev环境好久没有更新，更新了最新的genymotion后，adb不能连接到虚拟机，花费了些时间，记录如下：1.执行adb提示adb server is out of date,尝试修改genymotion的adb路径为~/Library/Android/sdk,执行adb kill-server,adb start-server后问题依旧2.求助google，发现需要将adb upd">
 
 
 
@@ -90,7 +84,7 @@
   };
 </script>
 
-  <title> blog whith hexo | blog </title>
+  <title> adb server is out of date | blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -210,7 +204,7 @@
             
             
               
-                blog whith hexo
+                adb server is out of date
               
             
           </h1>
@@ -222,8 +216,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-25T15:32:07+08:00" content="2016-02-25">
-              2016-02-25
+            <time itemprop="dateCreated" datetime="2016-04-18T17:29:27+08:00" content="2016-04-18">
+              2016-04-18
             </time>
           </span>
 
@@ -233,8 +227,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/25/blog-whith-hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/25/blog-whith-hexo/" itemprop="commentsCount"></span>
+                <a href="/2016/04/18/adb-server-is-out-of-date/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/18/adb-server-is-out-of-date/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -255,29 +249,7 @@
       
 
       
-        <p>虽然写的少，但是看到好的东西就长了草，了解了下<a href="https://hexo.io/" target="_blank" rel="external">hexo</a>,觉得比Jekyll要便捷多了，至少hexo这个单词比Jekyll好拼写，以下是搭建和迁移过程：</p>
-<h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><h2 id="安装nodejs和git-（hexo基于nodejs）"><a href="#安装nodejs和git-（hexo基于nodejs）" class="headerlink" title="安装nodejs和git （hexo基于nodejs）"></a>安装nodejs和git （hexo基于nodejs）</h2><p>1.通过nvm安装nodejs(nvm是node的版本管理，可以安装和切换不同版本的nodejs)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">31.0</span>/install.sh | bash </span><br><span class="line">$ nvm install <span class="number">5.7</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-<p>2.通过brew安装git: <code>brew install git</code></p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<h2 id="修改配置说明"><a href="#修改配置说明" class="headerlink" title="修改配置说明"></a>修改配置<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">说明</a></h2><p>编辑_config.yml填写Site和URL部分,theme修改为next</p>
-<h2 id="选择模板"><a href="#选择模板" class="headerlink" title="选择模板"></a>选择模板</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>编辑_config.yml,theme修改为next</p>
-<h2 id="安装hexo-server-用于本地浏览"><a href="#安装hexo-server-用于本地浏览" class="headerlink" title="安装hexo server(用于本地浏览)"></a>安装hexo server(用于本地浏览)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-<h2 id="安装部署工具-用于将静态文件push到github等"><a href="#安装部署工具-用于将静态文件push到github等" class="headerlink" title="安装部署工具(用于将静态文件push到github等)"></a>安装部署工具(用于将静态文件push到github等)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>编辑_config.yml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:&#10;  type: git&#10;  repo: git@github.com:tcking/tcking.github.io.git&#10;  branch: master&#10;  message:</span><br></pre></td></tr></table></figure></p>
-<h2 id="迁移（from-Jekyll）"><a href="#迁移（from-Jekyll）" class="headerlink" title="迁移（from Jekyll）"></a>迁移（from Jekyll）</h2><p>1.将原目录_posts中的md文件拷贝到source/_posts目录中<br>2.编辑_config.yml,new_post_name的值修改为 <code>:year-:month-:day-:title.md</code></p>
-<h1 id="写作流程"><a href="#写作流程" class="headerlink" title="写作流程"></a>写作流程</h1><ol>
-<li><p>创建blog</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo new <span class="string">"myblog"</span> //<span class="keyword">then</span> edit the new file</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>浏览localhost:4000</p>
-</li>
-<li>Press Ctrl+C to stop</li>
-<li><code>$ hexo generate</code> //生成html</li>
-<li><code>$ hexo deploy</code> //push到github</li>
-</ol>
+        <p>自己电脑上的dev环境好久没有更新，更新了最新的genymotion后，adb不能连接到虚拟机，花费了些时间，记录如下：<br>1.执行adb提示<code>adb server is out of date</code>,尝试修改genymotion的adb路径为<code>~/Library/Android/sdk</code>,执行<code>adb kill-server</code>,<code>adb start-server</code>后问题依旧<br>2.求助google，发现需要将<code>adb</code> update to <code>1.0.32</code> from <code>1.0.31</code>.<br>3.直接执行<code>~/Library/Android/sdk/platform-tools/adb version</code>打印版本为1.0.35，<code>adb version</code>为1.0.31，看来是两个可执行文件，并且版本不一致<br>4.<code>$ which adb</code>找到adb的位置，将<code>~/Library/Android/sdk/platform-tools/adb</code>覆盖</p>
 
       
     </div>
@@ -289,17 +261,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/24/middle-summarize/" rel="next" title="年中总结&所想">
-                <i class="fa fa-chevron-left"></i> 年中总结&所想
+              <a href="/2016/03/02/jitpack/" rel="next" title="jitpack">
+                <i class="fa fa-chevron-left"></i> jitpack
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/25/compile-ijkplayer-with-openssl/" rel="prev" title="compile ijkplayer with openssl">
-                compile ijkplayer with openssl <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -325,8 +293,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/25/blog-whith-hexo/"
-           data-title="blog whith hexo" data-url="http://tcking.github.io/2016/02/25/blog-whith-hexo/">
+      <div class="ds-thread" data-thread-key="2016/04/18/adb-server-is-out-of-date/"
+           data-title="adb server is out of date" data-url="http://tcking.github.io/2016/04/18/adb-server-is-out-of-date/">
       </div>
     
   </div>
@@ -421,7 +389,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建"><span class="nav-number">1.</span> <span class="nav-text">搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nodejs和git-（hexo基于nodejs）"><span class="nav-number">1.1.</span> <span class="nav-text">安装nodejs和git （hexo基于nodejs）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建站"><span class="nav-number">1.3.</span> <span class="nav-text">建站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改配置说明"><span class="nav-number">1.4.</span> <span class="nav-text">修改配置说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择模板"><span class="nav-number">1.5.</span> <span class="nav-text">选择模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo-server-用于本地浏览"><span class="nav-number">1.6.</span> <span class="nav-text">安装hexo server(用于本地浏览)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装部署工具-用于将静态文件push到github等"><span class="nav-number">1.7.</span> <span class="nav-text">安装部署工具(用于将静态文件push到github等)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迁移（from-Jekyll）"><span class="nav-number">1.8.</span> <span class="nav-text">迁移（from Jekyll）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写作流程"><span class="nav-number">2.</span> <span class="nav-text">写作流程</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

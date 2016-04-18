@@ -189,15 +189,97 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/18/adb-server-is-out-of-date/" itemprop="url">
+                  adb server is out of date
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-04-18T17:29:27+08:00" content="2016-04-18">
+              2016-04-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/18/adb-server-is-out-of-date/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/18/adb-server-is-out-of-date/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        
-        
-        
       
 
       
-    
+        
+          
+            <p>自己电脑上的dev环境好久没有更新，更新了最新的genymotion后，adb不能连接到虚拟机，花费了些时间，记录如下：<br>1.执行adb提示<code>adb server is out of date</code>,尝试修改genymotion的adb路径为<code>~/Library/Android/sdk</code>,执行<code>adb kill-server</code>,<code>adb start-server</code>后问题依旧<br>2.求助google，发现需要将<code>adb</code> update to <code>1.0.32</code> from <code>1.0.31</code>.<br>3.直接执行<code>~/Library/Android/sdk/platform-tools/adb version</code>打印版本为1.0.35，<code>adb version</code>为1.0.31，看来是两个可执行文件，并且版本不一致<br>4.<code>$ which adb</code>找到adb的位置，将<code>~/Library/Android/sdk/platform-tools/adb</code>覆盖</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -1219,121 +1301,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/02/23/mobile-page-dev/" itemprop="url">
-                  移动设备上的web页面开发小结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2015-02-23T00:00:00+08:00" content="2015-02-23">
-              2015-02-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分類於</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/skill/" itemprop="url" rel="index">
-                    <span itemprop="name">skill</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/02/23/mobile-page-dev/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/02/23/mobile-page-dev/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>大年初四写了个移动端的页面，当时css的东西都忘记的差不多了，很久不去用的东西就会忘记，所以写下来是个好习惯，便于以后快速查询，同时也思路的整理和加强。<br>移动设备上和pc上的不同在于显示的尺寸，现在的移动设备像素密度很高，如果浏览器将css样式中的1px显示为一个物理像素点的话，就会太小看不清。name=”viewport”的meta标签用于指定显示区域的像素宽度，它影响了css中px单位的实际值。</p>
-<h1 id="1-设置viewport"><a href="#1-设置viewport" class="headerlink" title="1.设置viewport"></a>1.设置viewport</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>加上此meta标签后，不管设备的物理分辨率是多少，浏览器会将宽度定义为320px（类似android中的dip），也就是说在css中定义320px的宽度就会占据整个屏幕的宽度。</p>
-<h1 id="2-设计图和css数据值之间的关系"><a href="#2-设计图和css数据值之间的关系" class="headerlink" title="2.设计图和css数据值之间的关系"></a>2.设计图和css数据值之间的关系</h1><p>移动设备上网页的设计图的大小一般都是640px，设置了viewport后浏览器的宽度变为320px，因此在效果图上的尺寸都要除以2再写入到css中，包括字体也是一样的。</p>
-<h1 id="3-切图的大小"><a href="#3-切图的大小" class="headerlink" title="3.切图的大小"></a>3.切图的大小</h1><p>直接从psd中按原大小切图，不需要缩小一半，因为设置了viewport后浏览器认为宽度为320px，但实际显示的像素点不是320个点，在1080*1920的分辨上，如果css中定义宽度为320px的div的一个背景图片，实际就是满屏要1080个像素点来显示，按psd中按原大小切图，宽度为640px，如果再缩小一半则只有320px，把320px的图片放到1080上显示会发虚，所以图片一般按原大小切，图片作为背景的时候，增加属性<code>backgroud-size:contain</code>，让其自适应容器的大小。</p>
-<p>再记下<code>backgroud-size</code>样式，语法为<code>background-size: *px|*%|cover|contain;</code>，如果是px或者%,第一个值表示w，第二个表示h，如果第二个值没有，则表示auto，注意，如果用%则是表示父容器的%（不是图片的%），cover和contain都会保持图片的比例，不同的是cover保证覆盖整个容器，contain保证完全显示出图片</p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1380,7 +1347,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
